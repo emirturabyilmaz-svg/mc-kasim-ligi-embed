@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>🏆 Kasım Ligi</title>
   <style>
-    html,body{height:100%;margin:0;background:#0b0b0b;}
-    iframe{width:100%;height:100vh;border:0;display:block;}
-    .loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;color:#f1c40f;font-family:Arial;}
+    html,body{
+      height:100%;
+      margin:0;
+      background:#ffffff; /* beyaz zemin */
+    }
+    iframe{
+      width:100%;
+      height:100vh;
+      border:none;
+      display:block;
+      background:#ffffff;
+    }
+    .loading{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#f39c12;
+      font-family:Arial;
+      font-size:18px;
+      background:#ffffff;
+    }
   </style>
 </head>
 <body>
-  <div class="loading" id="loading">🔄 Kasım Ligi yükleniyor...</div>
-  <!-- Aşağıdaki src'yi kendi Hugging Face space URL'ine (mc-kasim-ligi.hf.space) göre değiştir -->
+  <div class="loading" id="loading">⏳ Kasım Ligi yükleniyor...</div>
+  <!-- Aşağıdaki src'yi kendi Hugging Face linkinle değiştir -->
   <iframe id="appFrame"
-          src="https://emirt6-kasim-ligi-v2.hf.space?__theme=dark"
+          src="https://emirt6-kasim-ligi-v2.hf.space?__theme=light" 
           allow="camera; microphone; clipboard-read; clipboard-write"
           onload="document.getElementById('loading').style.display='none';">
   </iframe>
