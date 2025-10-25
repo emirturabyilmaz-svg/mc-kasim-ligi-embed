@@ -3,40 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>🏆 Kasım Ligi</title>
+  <title>Kasım Ligi</title>
   <style>
-    html,body{
-      height:100%;
+    html,body {
       margin:0;
-      background:#ffffff; /* beyaz zemin */
+      height:100%;
+      background-color:#ffffff !important;
+      overflow:hidden;
     }
-    iframe{
+    iframe {
       width:100%;
       height:100vh;
       border:none;
-      display:block;
-      background:#ffffff;
+      background-color:#ffffff !important;
+      filter: invert(0) !important;
     }
-    .loading{
-      position:fixed;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#f39c12;
-      font-family:Arial;
-      font-size:18px;
-      background:#ffffff;
+    /* koyu tema kalıntısını sıfırla */
+    body, * {
+      color-scheme: only light !important;
+      background:#ffffff !important;
+      color:#000000 !important;
     }
   </style>
 </head>
 <body>
-  <div class="loading" id="loading">⏳ Kasım Ligi yükleniyor...</div>
-  <!-- Aşağıdaki src'yi kendi Hugging Face linkinle değiştir -->
-  <iframe id="appFrame"
-          src="https://emirt6-kasim-ligi-v2.hf.space?__theme=light" 
-          allow="camera; microphone; clipboard-read; clipboard-write"
-          onload="document.getElementById('loading').style.display='none';">
-  </iframe>
+  <iframe 
+    src="https://emirt6-kasim-ligi-v2.hf.space?__theme=light&embed=true"
+    allow="clipboard-read; clipboard-write; microphone; camera"
+    sandbox="allow-scripts allow-same-origin allow-forms"
+    referrerpolicy="no-referrer"
+  ></iframe>
 </body>
 </html>
+
