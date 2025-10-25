@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🏆 Kasım Ligi</title>
+  <style>
+    html,body{height:100%;margin:0;background:#0b0b0b;}
+    iframe{width:100%;height:100vh;border:0;display:block;}
+    .loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;color:#f1c40f;font-family:Arial;}
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">🔄 Kasım Ligi yükleniyor...</div>
+  <!-- Aşağıdaki src'yi kendi Hugging Face space URL'ine (mc-kasim-ligi.hf.space) göre değiştir -->
+  <iframe id="appFrame"
+          src="https://emirt6-kasim-ligi-v2.hf.space?__theme=dark"
+          allow="camera; microphone; clipboard-read; clipboard-write"
+          onload="document.getElementById('loading').style.display='none';">
+  </iframe>
+</body>
+</html>
